@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import { Layout, Typography, Row, Col, Table } from 'antd'
 import { colStyle, contentStyle, tableStyle } from '../../styles'
 import { connect } from 'react-redux'
 import { fetchAssetPlatforms, setSiderMenuItem, setHeaderMenuItem } from '../../redux_actions'
 import ReactSider from '../Navigation/ReactSider'
+
 const { Content } = Layout
 const { Title, Paragraph } = Typography
 
@@ -38,8 +40,6 @@ class ReactAssetPlatforms extends Component {
   ]
 
   render () {
-    // const loading = this.props.data.length > 0 ? false : true;
-
     return (
       <React.Fragment>
         <ReactSider/>
@@ -48,11 +48,10 @@ class ReactAssetPlatforms extends Component {
             <Title level={2}>Asset Platforms</Title>
             <Paragraph>A list of available asset platforms.</Paragraph>
             <Row gutter={16} style={{ textAlign: 'center' }} type="flex">
-
               <Col xs={24} sm={24} md={8} lg={8} xl={8} style={colStyle}>
+                {/* Additional content can go here */}
               </Col>
             </Row>
-
             <Table
               style={tableStyle}
               bordered={true}
@@ -86,11 +85,16 @@ class ReactAssetPlatforms extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    data: state.asset_platforms
-  }
+ReactAssetPlatforms.propTypes = {
+  fetchAssetPlatforms: PropTypes.func.isRequired,
+  setSiderMenuItem: PropTypes.func.isRequired,
+  setHeaderMenuItem: PropTypes.func.isRequired,
+  data: PropTypes.array.isRequired
 }
+
+const mapStateToProps = (state) => ({
+  data: state.asset_platforms
+})
 
 const mapActionsToProps = {
   fetchAssetPlatforms,
