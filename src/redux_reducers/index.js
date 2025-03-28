@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 import { combineReducers } from "redux";
 import { market_processed_table_keys } from "../constants";
 import {
