@@ -50,7 +50,11 @@ const coinsReducer = (state = [], action) => {
 const compileMarketData = (marketData) => {
   const data = {}
 
-  for (let market_index = 0; market_index < market_processed_table_keys.length; market_index++) {
+  for (
+    let market_index = 0;
+    market_index < market_processed_table_keys.length;
+    market_index++
+  ) {
     const field = market_processed_table_keys[market_index]
     const entries = Object.entries(marketData[field])
     for (let i = 0; i < entries.length; i++) {
