@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React, { Component } from 'react'
 import ReactSider from '../Navigation/ReactSider'
 import { Link } from 'react-router-dom'

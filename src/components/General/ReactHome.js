@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React, { Component } from 'react'
 import { Layout, Typography, Card, Row, Col } from 'antd'
 import { contentStyle, colStyle } from '../../styles'

@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React, { Component } from 'react'
 import { Table, Tag, Layout, Typography } from 'antd'
 import { contentStyle, tableStyle } from '../../styles'
