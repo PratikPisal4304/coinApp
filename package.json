@@ -5,7 +5,7 @@
   "homepage": ".",
   "dependencies": {
     "antd": "^4.24.16",
-    "axios": "^0.21.4",
+    "axios": "^1.6.2",
     "chart.js": "^2.9.4",
     "coin-app": "file:",
     "gh-pages": "^2.0.1",
